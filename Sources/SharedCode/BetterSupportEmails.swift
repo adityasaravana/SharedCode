@@ -111,6 +111,5 @@ Sincerely,
 #else
         openURL(URL(string: EmailController().createMailtoLink(subject: "\(appName) ", body: body))!)
 #endif
-        
     }
 }
