@@ -73,7 +73,7 @@ public class EmailController {
 #endif
 
 // MARK: BetterSupportEmails
-struct BetterSupportEmails {
+public struct BetterSupportEmails {
     @Environment(\.openURL) private var openURL
     let appName = Bundle.main.displayName ?? ""
     let appVersion = Bundle.main.appVersion ?? "Version not found"
@@ -101,11 +101,11 @@ Sincerely,
 """
     }
     
-    init() {
+    public init() {
         
     }
     
-    func openEmailView() {
+    public func openEmailView() {
 #if canImport(MessageUI)
         EmailController().sendEmail(subject: "\(appName) ", body: body)
 #else
